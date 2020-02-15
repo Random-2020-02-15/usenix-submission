@@ -1,0 +1,10 @@
+error type in spec when using clang:
+1. clang-9: error: linker command failed with exit code 1 (use -v to see invocation)
+2. Library.cpp:80:29: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  printf("Ways quantity : %"PRId64"\n",wayqu);
+3.ParserForXMLSchema.cpp:303:35: error: non-constant-expression cannot be narrowed from type 'XMLInt32' (aka 'int') to 'XMLCh' (aka 'unsigned short') in initializer list [-Wc++11-narrowing]
+                XMLCh chStr[] = { ch, chNull };
+4. include/lac/vector.templates.h:750:8: error: no member named 'strcat' in namespace 'std'
+  std::strcat(buf, "\n[");
+5. mpsinput.cc:75:52: error: invalid operands to binary expression ('std::basic_istream<char, std::char_traits<char> >::__istream_type' (aka 'basic_istream<char, std::char_traits<char> >') and 'int')
+         if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
